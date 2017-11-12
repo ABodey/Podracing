@@ -2,11 +2,15 @@
 "SWAPI races" is a game based on the characters and environment of Star Wars.  User will choose a character which will determine his alliance.  He will be assigned a starter ship, based on his alliance, that he will use to race.  The user will race against a non-alliance Bounty Hunter (computer) and/or another user.
 
 # MOTIVATION
-This project is being created to demonstrate a relational database.
+This project is being created to demonstrate a NoSQL database.
 
 # API REFERENCE
 We are using the Star Wars API SWAPI for our characters, vehicles, planets, and more.
 https://swapi.co/
+
+# API
+
+TODO list out what calls are used for the api
 
 # USER'S ADVENTURE
 - The user will begin his journey by registering an account.
