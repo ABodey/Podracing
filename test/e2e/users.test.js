@@ -1,9 +1,7 @@
 const { assert } = require('chai');
 const request = require('./request');
 const db = require('./db');
-const seedCharacters = require('../../lib/scripts/seed-characters');
-const seedVehicles = require('../../lib/scripts/seed-vehicles');
-const seedPlanets = require('../../lib/scripts/seed-planets');
+const seedData = require('../../lib/scripts/seed-data');
 const createRace = require('../../lib/scripts/create-race');
 const Character = require('../../lib/models/character');
 const Vehicle = require('../../lib/models/vehicle');
@@ -35,7 +33,7 @@ describe('User routes test', () => {
     describe('Character route tests', () => {
         beforeEach( function()  {
             this.timeout(10000);
-            return seedCharacters();
+            return seedData();
         });
 
         it('should get a character by id and add to user property', () => {
@@ -118,7 +116,7 @@ describe('User routes test', () => {
     describe('Vehicle route tests', () => {
         beforeEach( function()  {
             this.timeout(10000);
-            return seedVehicles();
+            return seedData();
         });
 
         it('should get a vehicle by id and add to user property if affordable', () => {
@@ -157,9 +155,8 @@ describe('User routes test', () => {
         describe('Join race routes', () => {
             beforeEach( function()  {
                 this.timeout(60000);
-                return seedVehicles()
-                    .then(() => seedCharacters())
-                    .then(() => seedPlanets())
+                return seedData()
+                    .then(() => seedData())
                     .then(() => createRace());
             });
 

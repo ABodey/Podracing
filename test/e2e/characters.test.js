@@ -1,7 +1,7 @@
 const { assert } = require('chai');
 const request = require('./request');
 const db = require('./db');
-const seedCharacters = require('../../lib/scripts/seed-characters');
+const seedCharacters = require('../../lib/scripts/seed-data');
 
 describe('Characters test', () => {
     let newUser = null;

@@ -1,7 +1,7 @@
 const { assert } = require('chai');
 const request = require('./request');
 const db = require('./db');
-const seedPlanets = require('../../lib/scripts/seed-planets');
+const seedPlanets = require('../../lib/scripts/seed-data');
 const Planet = require('../../lib/models/planet');
 
 describe('Races test', () => {

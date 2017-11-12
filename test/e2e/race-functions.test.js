@@ -1,6 +1,6 @@
 const { assert } = require('chai');
 const db = require('./db');
-const seedPlanets = require('../../lib/scripts/seed-planets');
+const seedPlanets = require('../../lib/scripts/seed-data');
 const request = require('./request');
 const createRace = require('../../lib/scripts/create-race');
 const finishRaces = require('../../lib/scripts/finish-races');

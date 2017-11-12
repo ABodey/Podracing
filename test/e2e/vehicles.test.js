@@ -1,7 +1,7 @@
 const {assert} = require('chai');
 const request = require('./request');
 const db = require('./db');
-const seedVehicles = require('../../lib/scripts/seed-vehicles');
+const seedData = require('../../lib/scripts/seed-data');
 
 describe('Vehicles test', () => {
     let newUser = null;
@@ -22,7 +22,7 @@ describe('Vehicles test', () => {
             .send(newUser)
             .then( ({body}) => {
                 userToken = body.token;
-                return seedVehicles();
+                return seedData();
             });
     });
 
